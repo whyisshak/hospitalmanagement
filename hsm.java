@@ -1156,11 +1156,11 @@ userlog.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void UlogoutbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UlogoutbtnActionPerformed
-this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));        // TODO add your handling code here:
+userpage.dispatchEvent(new WindowEvent(userpage, WindowEvent.WINDOW_CLOSING));        // TODO add your handling code here:
     }//GEN-LAST:event_UlogoutbtnActionPerformed
 
     private void AlogoutbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlogoutbtnActionPerformed
-this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));        // TODO add your handling code here:
+adminpage.dispatchEvent(new WindowEvent(adminpage, WindowEvent.WINDOW_CLOSING));        // TODO add your handling code here:
     }//GEN-LAST:event_AlogoutbtnActionPerformed
 
     private void UsearchbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsearchbtnActionPerformed
