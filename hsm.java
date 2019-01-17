@@ -132,6 +132,7 @@ public class hsm extends javax.swing.JFrame {
         Aaidtf = new javax.swing.JTextField();
         Airbtn = new javax.swing.JButton();
         jLabel38 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
         useeid = new javax.swing.JDialog();
         jLabel32 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -749,9 +750,19 @@ public class hsm extends javax.swing.JFrame {
 
         Ausbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Ausbtn.setText("Update status");
+        Ausbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AusbtnActionPerformed(evt);
+            }
+        });
 
         Assbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Assbtn.setText("Show status");
+        Assbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AssbtnActionPerformed(evt);
+            }
+        });
 
         Astatuslabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -814,6 +825,11 @@ public class hsm extends javax.swing.JFrame {
 
         Asearchtf.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Asearchtf.setText("Search");
+        Asearchtf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AsearchtfActionPerformed(evt);
+            }
+        });
 
         Asearchlabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -870,6 +886,11 @@ public class hsm extends javax.swing.JFrame {
 
         Airbtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Airbtn.setText("Insert record");
+        Airbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AirbtnActionPerformed(evt);
+            }
+        });
 
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel38.setText("NEW RECORD");
@@ -878,30 +899,35 @@ public class hsm extends javax.swing.JFrame {
         admitdoctor.getContentPane().setLayout(admitdoctorLayout);
         admitdoctorLayout.setHorizontalGroup(
             admitdoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(admitdoctorLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(admitdoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel27)
-                    .addComponent(jLabel28)
-                    .addComponent(jLabel29)
-                    .addComponent(jLabel30)
-                    .addComponent(jLabel31)
-                    .addComponent(jLabel26))
-                .addGap(54, 54, 54)
-                .addGroup(admitdoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Airbtn)
-                    .addGroup(admitdoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(Anametf)
-                        .addComponent(Afstf, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
-                        .addComponent(Adtf)
-                        .addComponent(Aqtf)
-                        .addComponent(Actf, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Aaidtf, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, admitdoctorLayout.createSequentialGroup()
                 .addContainerGap(112, Short.MAX_VALUE)
                 .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(101, 101, 101))
+            .addGroup(admitdoctorLayout.createSequentialGroup()
+                .addGroup(admitdoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(admitdoctorLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(admitdoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel27)
+                            .addComponent(jLabel28)
+                            .addComponent(jLabel29)
+                            .addComponent(jLabel30)
+                            .addComponent(jLabel31)
+                            .addComponent(jLabel26))
+                        .addGap(54, 54, 54)
+                        .addGroup(admitdoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Airbtn)
+                            .addGroup(admitdoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(Anametf)
+                                .addComponent(Afstf, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+                                .addComponent(Adtf)
+                                .addComponent(Aqtf)
+                                .addComponent(Actf, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Aaidtf, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE))))
+                    .addGroup(admitdoctorLayout.createSequentialGroup()
+                        .addGap(103, 103, 103)
+                        .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         admitdoctorLayout.setVerticalGroup(
             admitdoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -934,7 +960,9 @@ public class hsm extends javax.swing.JFrame {
                     .addComponent(jLabel31))
                 .addGap(18, 18, 18)
                 .addComponent(Airbtn)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1149,6 +1177,68 @@ catch(Exception z){
 }        // TODO add your handling code here:
     }//GEN-LAST:event_UsearchbtnActionPerformed
 
+    private void AssbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AssbtnActionPerformed
+int a=Integer.parseInt(Adidtf.getText());
+        try{
+    Class.forName("com.mysql.jdbc.Driver");
+    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/software","root","shak");
+    Statement st=con.createStatement();
+    ResultSet i=st.executeQuery("select name,dept,status from doctor where(doctorid='"+a+"')");
+    Astatuslabel.setText(""+i);
+}
+catch(Exception z){
+    System.out.println(z);
+}        // TODO add your handling code here:
+    }//GEN-LAST:event_AssbtnActionPerformed
+
+    private void AusbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AusbtnActionPerformed
+int a=Integer.parseInt(Adidtf.getText());
+String b=Astf.getText();
+        try{
+    Class.forName("com.mysql.jdbc.Driver");
+    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/software","root","shak");
+    Statement st=con.createStatement();
+    int i=st.executeUpdate("update doctor set status='"+b+"' where doctorid='"+a+"'");
+    Astatuslabel.setText("Doctors status updated");
+}
+catch(Exception z){
+    System.out.println(z);
+}        // TODO add your handling code here:
+    }//GEN-LAST:event_AusbtnActionPerformed
+
+    private void AsearchtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsearchtfActionPerformed
+int a=Integer.parseInt(Adrtf.getText());
+        try{
+    Class.forName("com.mysql.jdbc.Driver");
+    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/software","root","shak");
+    Statement st=con.createStatement();
+    ResultSet i=st.executeQuery("select * from patient where(doctorid='"+a+"')");
+    Asearchlabel.setText(""+i);
+}
+catch(Exception z){
+    System.out.println(z);
+}        // TODO add your handling code here:
+    }//GEN-LAST:event_AsearchtfActionPerformed
+
+    private void AirbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AirbtnActionPerformed
+String a=Anametf.getText();
+String b=Aqtf.getText();
+String c=Adtf.getText();
+int d=Integer.parseInt(Afstf.getText());
+int e=Integer.parseInt(Actf.getText());
+int f=Integer.parseInt(Aaidtf.getText());
+        try{
+    Class.forName("com.mysql.jdbc.Driver");
+    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/software","root","shak");
+    Statement st=con.createStatement();
+    int i=st.executeUpdate("insert into doctor values('"+a+"','"+b+"','"+c+"','"+d+"','"+e+"','"+f+"')");
+    jLabel40.setText("   record inserted");
+}
+catch(Exception z){
+    System.out.println(z);
+}        // TODO add your handling code here:
+    }//GEN-LAST:event_AirbtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1275,6 +1365,7 @@ catch(Exception z){
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
